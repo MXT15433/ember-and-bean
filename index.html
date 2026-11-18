@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ember & Bean | Specialty Coffee Roastery & Cafe</title>
+  <meta name="description" content="Small-batch specialty coffee roastery and modern cafe. Ethically sourced single-origin beans, craft espresso bar, and artisan roasts in Portland, OR.">
+  
+  <!-- Preconnect and Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header / Sticky Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Ember & Bean Home">
+        <svg class="logo-icon" width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Bean contour -->
+          <path d="M16 2.5C8.82 2.5 3 8.32 3 15.5C3 22.68 8.82 28.5 16 28.5C23.18 28.5 29 22.68 29 15.5C29 8.32 23.18 2.5 16 2.5Z" stroke="#C85A32" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- Central curved cleft / ember flame -->
+          <path d="M16 6C12.5 11 19.5 19 16 25" stroke="#C85A32" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="16" cy="15.5" r="2" fill="#C85A32" />
+        </svg>
+        <span class="brand-text">Ember <span class="ampersand">&</span> Bean</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#story" class="nav-link">Our Story</a></li>
+          <li><a href="#roasts" class="nav-link">Roasts</a></li>
+          <li><a href="#menu" class="nav-link">Menu</a></li>
+          <li><a href="#visit" class="nav-link">Visit Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Utility Actions -->
+      <div class="header-actions">
+        <!-- Live Cart Toggle Button -->
+        <button id="cart-btn" class="cart-trigger-btn" aria-label="View shopping bag" aria-haspopup="dialog">
+          <svg class="cart-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-counter" id="cart-counter" aria-live="polite">0</span>
+        </button>
+
+        <a href="#roasts" class="btn btn-primary header-cta">Order Beans</a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="menu-toggle" class="mobile-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav" class="mobile-nav-drawer" aria-hidden="true">
+      <ul class="mobile-nav-list">
+        <li><a href="#story" class="mobile-nav-link">Our Story</a></li>
+        <li><a href="#roasts" class="mobile-nav-link">Roasts</a></li>
+        <li><a href="#menu" class="mobile-nav-link">Menu</a></li>
+        <li><a href="#visit" class="mobile-nav-link">Visit Us</a></li>
+        <li class="mobile-cta-item">
+          <a href="#roasts" class="btn btn-primary btn-block mobile-nav-btn">Order Beans</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <!-- Hero Left Column: Narrative & CTAs -->
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <span>Artisan Coffee Roasters • Small-Batch Est. 2024</span>
+          </div>
+          <h1 class="hero-title">Small-Batch Coffee, Roasted to Order</h1>
+          <p class="hero-description">
+            Directly sourced from sustainable high-elevation micro-lots. We flame-roast in micro-batches every Tuesday and Friday, dispatching whole beans within 48 hours for pristine terroir and fragrance.
+          </p>
+          <div class="hero-actions">
+            <a href="#roasts" class="btn btn-primary btn-lg">Shop Roasts</a>
+            <a href="#menu" class="btn btn-secondary btn-lg">Explore Menu</a>
+          </div>
+          
+          <div class="hero-trust-badges">
+            <div class="trust-badge-item">
+              <span class="badge-value">100%</span>
+              <span class="badge-label">Direct Trade</span>
+            </div>
+            <div class="trust-divider" aria-hidden="true"></div>
+            <div class="trust-badge-item">
+              <span class="badge-value">48hr</span>
+              <span class="badge-label">Roast to Ship</span>
+            </div>
+            <div class="trust-divider" aria-hidden="true"></div>
+            <div class="trust-badge-item">
+              <span class="badge-value">86+</span>
+              <span class="badge-label">Q-Cup Score</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: High-Contrast Coffee Hero Visual -->
+        <div class="hero-visual-wrapper">
+          <div class="hero-visual-card">
+            <!-- Decorative Visual Composition -->
+            <div class="visual-art-board" role="img" aria-label="Artisan pour-over coffee craft illustration with glowing ember accents">
+              <!-- Steam elements -->
+              <div class="steam-stream steam-1" aria-hidden="true"></div>
+              <div class="steam-stream steam-2" aria-hidden="true"></div>
+              <div class="steam-stream steam-3" aria-hidden="true"></div>
+
+              <!-- Graphic Coffee Brewer Silhouette -->
+              <svg class="coffee-craft-graphic" viewBox="0 0 340 380" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- Warm Glow Ambient Circle -->
+                <circle cx="170" cy="190" r="140" fill="url(#hero-glow)" opacity="0.45" />
+
+                <!-- Ceramic Dripper Cone -->
+                <path d="M90 70 L250 70 L205 170 L135 170 Z" fill="#231A16" stroke="#C85A32" stroke-width="3" />
+                <path d="M78 64 H262 V70 H78 Z" fill="#C85A32" />
+                <!-- Filter paper fold -->
+                <path d="M100 70 L240 70 L195 160 L145 160 Z" fill="#F0EAE1" opacity="0.9" />
+                <!-- Coffee grounds bloom -->
+                <ellipse cx="170" cy="80" rx="55" ry="12" fill="#42291F" />
+                <!-- Kettle Pour Stream -->
+                <path d="M170 80 Q171 110 170 170" stroke="#C85A32" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="6 4" />
+
+                <!-- Glass Carafe -->
+                <path d="M135 172 L110 280 C106 295 118 308 134 308 H206 C222 308 234 295 230 280 L205 172 Z" fill="#231A16" fill-opacity="0.12" stroke="#231A16" stroke-width="3" />
+                <!-- Coffee Liquid in Carafe -->
+                <path d="M116 250 Q170 244 224 250 L212 296 C210 302 204 306 198 306 H142 C136 306 130 302 128 296 Z" fill="#C85A32" fill-opacity="0.85" />
+                
+                <!-- Glass Reflection Accent -->
+                <path d="M130 190 L120 270" stroke="#FAF7F2" stroke-width="2.5" stroke-linecap="round" opacity="0.5" />
+                
+                <!-- Carafe Handle -->
+                <path d="M218 190 C250 195 255 260 215 272" stroke="#231A16" stroke-width="4" stroke-linecap="round" fill="none" />
+
+                <defs>
+                  <radialGradient id="hero-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(170 190) rotate(90) scale(140)">
+                    <stop stop-color="#C85A32" stop-opacity="0.5"/>
+                    <stop offset="0.75" stop-color="#F0EAE1" stop-opacity="0.15"/>
+                    <stop offset="1" stop-color="#FAF7F2" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+              </svg>
+
+              <!-- Floating Hero Tag Card -->
+              <div class="hero-floating-card">
+                <span class="roaster-badge">🔥 Current Roast Drop</span>
+                <p class="floating-coffee-title">Guji Highland Peaberry</p>
+                <div class="floating-meta">
+                  <span class="taste-pill">White Peach</span>
+                  <span class="taste-pill">Honeysuckle</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="story-section" id="story">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-quote-block">
+            <span class="section-kicker">Our Philosophy</span>
+            <h2 class="section-title">Rooted in respect for origin, refined by fire.</h2>
+            <p class="story-body">
+              At Ember & Bean, we believe coffee is an agricultural wonder rather than a commodity. Every harvest tells the story of high altitudes, rich volcanic soils, and the tireless dedication of smallholder producers.
+            </p>
+            <p class="story-body">
+              We roast exclusively in small batches using cast-iron drums. This meticulous process preserves subtle floral aromatics and fruit brightness while caramelizing the natural sugars into silky, dessert-like sweetness.
+            </p>
+            <div class="story-signature">
+              <span class="signature-name">Elena Vance & Liam Moreau</span>
+              <span class="signature-role">Head Roasters & Founders</span>
+            </div>
+          </div>
+
+          <div class="story-features">
+            <div class="story-card">
+              <div class="card-icon-wrap" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <h3 class="story-card-title">Direct Farm Partnerships</h3>
+              <p class="story-card-desc">We pay an average of 42% above Fair Trade minimums directly to cooperative farmers in Oromia, Huila, and Huehuetenango.</p>
+            </div>
+
+            <div class="story-card">
+              <div class="card-icon-wrap" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+              </div>
+              <h3 class="story-card-title">Precision Micro-Roasting</h3>
+              <p class="story-card-desc">Continuous sensor monitoring tracks bean temperature curve to within 0.1°C, guaranteeing repeatable sweetness and body.</p>
+            </div>
+
+            <div class="story-card">
+              <div class="card-icon-wrap" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="m4.93 4.93 4.24 4.24M14.83 14.83l4.24 4.24M14.83 9.17l4.24-4.24M4.93 19.07l4.24-4.24"/>
+                </svg>
+              </div>
+              <h3 class="story-card-title">Zero Plastic Packaging</h3>
+              <p class="story-card-desc">All beans ship in 100% home-compostable biopolymer bags with one-way plant-based degassing valves.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Roasts Grid Section -->
+    <section class="roasts-section" id="roasts">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-kicker">Fresh From The Drum</span>
+          <h2 class="section-title">Featured Coffee Roasts</h2>
+          <p class="section-subtitle">Roasted in limited weekly runs. Shipped whole bean or precision-ground for your favorite brewer.</p>
+        </div>
+
+        <div class="roasts-grid" id="roasts-grid">
+          <!-- Roast Card 1: Single Origin Ethiopia -->
+          <article class="roast-card" data-product-id="roast-ethiopia">
+            <div class="roast-card-media">
+              <!-- Illustrated Coffee Bag SVG -->
+              <div class="coffee-bag-visual" aria-hidden="true">
+                <svg viewBox="0 0 180 220" width="140" height="170" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Bag body -->
+                  <path d="M35 30 L145 30 L155 200 C155 206 150 210 144 210 H36 C30 210 25 206 25 200 L35 30 Z" fill="#FAF7F2" stroke="#231A16" stroke-width="2.5"/>
+                  <!-- Bag top crimp seal -->
+                  <path d="M30 18 H150 V30 H30 Z" fill="#C85A32" />
+                  <line x1="30" y1="24" x2="150" y2="24" stroke="#FAF7F2" stroke-width="1.5" stroke-dasharray="4 2"/>
+                  <!-- Center Label -->
+                  <rect x="44" y="60" width="92" height="110" rx="4" fill="#F0EAE1" stroke="#231A16" stroke-width="1.5"/>
+                  <text x="90" y="82" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#C85A32" text-anchor="middle" letter-spacing="1">ETHIOPIA</text>
+                  <text x="90" y="98" font-family="'Playfair Display', serif" font-size="11" font-weight="600" fill="#231A16" text-anchor="middle">Guji Highland</text>
+                  <line x1="56" y1="108" x2="124" y2="108" stroke="#C85A32" stroke-width="1"/>
+                  <text x="90" y="124" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#6E6259" text-anchor="middle">Jasmine • Peach</text>
+                  <text x="90" y="136" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#6E6259" text-anchor="middle">Bergamot Tea</text>
+                  <circle cx="90" cy="154" r="5" fill="#C85A32" opacity="0.2"/>
+                  <circle cx="90" cy="154" r="2" fill="#C85A32"/>
+                </svg>
+              </div>
+              <span class="roast-badge badge-light">Light Roast</span>
+            </div>
+
+            <div class="roast-card-content">
+              <div class="roast-origin-meta">
+                <span class="origin-tag">Oromia Region • 2,150m</span>
+                <span class="process-tag">Heirloom • Washed</span>
+              </div>
+              <h3 class="roast-card-title">Single Origin Ethiopia</h3>
+              <p class="roast-card-desc">Luminous floral aromatics layered with ripe white peach, meyer lemon brightness, and a clean bergamot tea finish.</p>
+
+              <!-- Tasting Notes Chips -->
+              <div class="tasting-notes" aria-label="Tasting notes">
+                <span class="note-chip">Jasmine</span>
+                <span class="note-chip">White Peach</span>
+                <span class="note-chip">Bergamot</span>
+              </div>
+
+              <!-- Roast Level Indicator -->
+              <div class="roast-meter" aria-label="Roast intensity 2 out of 5">
+                <span class="meter-label">Intensity:</span>
+                <div class="meter-dots">
+                  <span class="meter-dot filled" aria-hidden="true"></span>
+                  <span class="meter-dot filled" aria-hidden="true"></span>
+                  <span class="meter-dot" aria-hidden="true"></span>
+                  <span class="meter-dot" aria-hidden="true"></span>
+                  <span class="meter-dot" aria-hidden="true"></span>
+                </div>
+              </div>
+
+              <div class="roast-card-footer">
+                <div class="price-wrap">
+                  <span class="price-currency">$</span>
+                  <span class="price-val">19.50</span>
+                  <span class="weight-label">/ 250g bag</span>
+                </div>
+                <button class="btn btn-primary add-to-bag-btn" 
+                        data-id="ethiopia" 
+                        data-name="Single Origin Ethiopia" 
+                        data-price="19.50"
+                        data-roast="Light Roast"
+                        aria-label="Add Single Origin Ethiopia to bag for $19.50">
+                  <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Roast Card 2: House Espresso Blend -->
+          <article class="roast-card" data-product-id="roast-espresso">
+            <div class="roast-card-media">
+              <!-- Illustrated Coffee Bag SVG -->
+              <div class="coffee-bag-visual" aria-hidden="true">
+                <svg viewBox="0 0 180 220" width="140" height="170" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Bag body -->
+                  <path d="M35 30 L145 30 L155 200 C155 206 150 210 144 210 H36 C30 210 25 206 25 200 L35 30 Z" fill="#231A16" stroke="#231A16" stroke-width="2.5"/>
+                  <!-- Bag top crimp seal -->
+                  <path d="M30 18 H150 V30 H30 Z" fill="#C85A32" />
+                  <line x1="30" y1="24" x2="150" y2="24" stroke="#FAF7F2" stroke-width="1.5" stroke-dasharray="4 2"/>
+                  <!-- Center Label -->
+                  <rect x="44" y="60" width="92" height="110" rx="4" fill="#FAF7F2" stroke="#C85A32" stroke-width="1.5"/>
+                  <text x="90" y="82" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#C85A32" text-anchor="middle" letter-spacing="1">HOUSE BLEND</text>
+                  <text x="90" y="98" font-family="'Playfair Display', serif" font-size="11" font-weight="600" fill="#231A16" text-anchor="middle">Velvet Ember</text>
+                  <line x1="56" y1="108" x2="124" y2="108" stroke="#C85A32" stroke-width="1"/>
+                  <text x="90" y="124" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#6E6259" text-anchor="middle">Dark Cocoa • Hazelnut</text>
+                  <text x="90" y="136" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#6E6259" text-anchor="middle">Salted Caramel</text>
+                  <circle cx="90" cy="154" r="5" fill="#C85A32" opacity="0.2"/>
+                  <circle cx="90" cy="154" r="2" fill="#C85A32"/>
+                </svg>
+              </div>
+              <span class="roast-badge badge-medium">Medium Roast</span>
+            </div>
+
+            <div class="roast-card-content">
+              <div class="roast-origin-meta">
+                <span class="origin-tag">Guatemala & Brazil • 1,600m</span>
+                <span class="process-tag">Bourbon • Washed/Nat</span>
+              </div>
+              <h3 class="roast-card-title">House Espresso Blend</h3>
+              <p class="roast-card-desc">Our flagship cafe espresso profile. Velvety body packed with bittersweet dark chocolate, roasted hazelnut, and caramel crema.</p>
+
+              <!-- Tasting Notes Chips -->
+              <div class="tasting-notes" aria-label="Tasting notes">
+                <span class="note-chip">Dark Chocolate</span>
+                <span class="note-chip">Hazelnut</span>
+                <span class="note-chip">Caramel Crema</span>
+              </div>
+
+              <!-- Roast Level Indicator -->
+              <div class="roast-meter" aria-label="Roast intensity 3.5 out of 5">
+                <span class="meter-label">Intensity:</span>
+                <div class="meter-dots">
+                  <span class="meter-dot filled" aria-hidden="true"></span>
+                  <span class="meter-dot filled" aria-hidden="true"></span>
+                  <span class="meter-dot filled" aria-hidden="true"></span>
+                  <span class="meter-dot filled half" aria-hidden="true"></span>
+                  <span class="meter-dot" aria-hidden="true"></span>
+                </div>
+              </div>
+
+              <div class="roast-card-footer">
+                <div class="price-wrap">
+                  <span class="price-currency">$</span>
+                  <span class="price-val">18.00</span>
+                  <span class="weight-label">/ 250g bag</span>
+                </div>
+                <button class="btn btn-primary add-to-bag-btn" 
+                        data-id="velvet-ember" 
+                        data-name="House Espresso Blend" 
+                        data-price="18.00"
+                        data-roast="Medium Roast"
+                        aria-label="Add House Espresso Blend to bag for $18.00">
+                  <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Roast Card 3: Decaf Colombia -->
+          <article class="roast-card" data-product-id="roast-colombia">
+            <div class="roast-card-media">
+              <!-- Illustrated Coffee Bag SVG -->
+              <div class="coffee-bag-visual" aria-hidden="true">
+                <svg viewBox="0 0 180 220" width="140" height="170" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Bag body -->
+                  <path d="M35 30 L145 30 L155 200 C155 206 150 210 144 210 H36 C30 210 25 206 25 200 L35 30 Z" fill="#F0EAE1" stroke="#231A16" stroke-width="2.5"/>
+                  <!-- Bag top crimp seal -->
+                  <path d="M30 18 H150 V30 H30 Z" fill="#4A6B53" />
+                  <line x1="30" y1="24" x2="150" y2="24" stroke="#FAF7F2" stroke-width="1.5" stroke-dasharray="4 2"/>
+                  <!-- Center Label -->
+                  <rect x="44" y="60" width="92" height="110" rx="4" fill="#FAF7F2" stroke="#4A6B53" stroke-width="1.5"/>
+                  <text x="90" y="82" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#4A6B53" text-anchor="middle" letter-spacing="1">SUGARCANE DECAF</text>
+                  <text x="90" y="98" font-family="'Playfair Display', serif" font-size="11" font-weight="600" fill="#231A16" text-anchor="middle">Huila Decaf</text>
+                  <line x1="56" y1="108" x2="124" y2="108" stroke="#4A6B53" stroke-width="1"/>
+                  <text x="90" y="124" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#6E6259" text-anchor="middle">Brown Sugar • Apple</text>
+                  <text x="90" y="136" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#6E6259" text-anchor="middle">Silky Milk Chocolate</text>
+                  <circle cx="90" cy="154" r="5" fill="#4A6B53" opacity="0.2"/>
+                  <circle cx="90" cy="154" r="2" fill="#4A6B53"/>
+                </svg>
+              </div>
+              <span class="roast-badge badge-dark">Decaf • Med-Dark</span>
+            </div>
+
+            <div class="roast-card-content">
+              <div class="roast-origin-meta">
+                <span class="origin-tag">Huila Valley • 1,750m</span>
+                <span class="process-tag">Caturra • EA Sugarcane</span>
+              </div>
+              <h3 class="roast-card-title">Decaf Colombia</h3>
+              <p class="roast-card-desc">Decaffeinated using natural sugarcane ethyl acetate to keep full terroir intact. Rich brown sugar sweetness, crisp red apple, and milk chocolate.</p>
+
+              <!-- Tasting Notes Chips -->
+              <div class="tasting-notes" aria-label="Tasting notes">
+                <span class="note-chip">Brown Sugar</span>
+                <span class="note-chip">Red Apple</span>
+                <span class="note-chip">Milk Chocolate</span>
+              </div>
+
+              <!-- Roast Level Indicator -->
+              <div class="roast-meter" aria-label="Roast intensity 4 out of 5">
+                <span class="meter-label">Intensity:</span>
+                <div class="meter-dots">
+                  <span class="meter-dot filled" aria-hidden="true"></span>
+                  <span class="meter-dot filled" aria-hidden="true"></span>
+                  <span class="meter-dot filled" aria-hidden="true"></span>
+                  <span class="meter-dot filled" aria-hidden="true"></span>
+                  <span class="meter-dot" aria-hidden="true"></span>
+                </div>
+              </div>
+
+              <div class="roast-card-footer">
+                <div class="price-wrap">
+                  <span class="price-currency">$</span>
+                  <span class="price-val">20.00</span>
+                  <span class="weight-label">/ 250g bag</span>
+                </div>
+                <button class="btn btn-primary add-to-bag-btn" 
+                        data-id="decaf-colombia" 
+                        data-name="Decaf Colombia" 
+                        data-price="20.00"
+                        data-roast="Med-Dark Roast"
+                        aria-label="Add Decaf Colombia to bag for $20.00">
+                  <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Cafe Menu Section -->
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-kicker">Cafe Experience</span>
+          <h2 class="section-title">The Seasonal Bar Menu</h2>
+          <p class="section-subtitle">Crafted with dialed extractions, local grass-fed organic milk, oat milk from Minor Figures, and scratch-baked morning pastries.</p>
+        </div>
+
+        <!-- Menu Tabbed Controller -->
+        <div class="menu-tabs-wrapper">
+          <div class="menu-tabs" role="tablist" aria-label="Cafe Menu Categories">
+            <button class="tab-btn active" role="tab" id="tab-espresso" aria-selected="true" aria-controls="panel-espresso" tabindex="0">
+              <span class="tab-icon">☕</span>
+              <span class="tab-title">Espresso Bar</span>
+            </button>
+            <button class="tab-btn" role="tab" id="tab-pourover" aria-selected="false" aria-controls="panel-pourover" tabindex="-1">
+              <span class="tab-icon">🫖</span>
+              <span class="tab-title">Pour Over</span>
+            </button>
+            <button class="tab-btn" role="tab" id="tab-pastries" aria-selected="false" aria-controls="panel-pastries" tabindex="-1">
+              <span class="tab-icon">🥐</span>
+              <span class="tab-title">Pastries</span>
+            </button>
+          </div>
+
+          <!-- Tab Panels -->
+          <div class="tab-panels">
+            <!-- Panel 1: Espresso Bar -->
+            <div class="tab-panel active" id="panel-espresso" role="tabpanel" aria-labelledby="tab-espresso">
+              <div class="menu-items-grid">
+                <article class="menu-item-card">
+                  <div class="item-header">
+                    <h3 class="item-name">Double Espresso</h3>
+                    <span class="item-price">$3.75</span>
+                  </div>
+                  <p class="item-desc">Extracted 1:2 ratio on our customized Synesso MVP. Rich crema, bright dried cherry, and chocolate finish.</p>
+                  <div class="item-meta">
+                    <span class="item-tag">House Velvet Blend or Single Origin (+.75)</span>
+                  </div>
+                </article>
+
+                <article class="menu-item-card">
+                  <div class="item-header">
+                    <h3 class="item-name">Cortado</h3>
+                    <span class="item-price">$4.50</span>
+                  </div>
+                  <p class="item-desc">Equal parts espresso and warm micro-foamed milk in a 4.5oz Gibraltar glass. Perfectly balanced.</p>
+                  <div class="item-meta">
+                    <span class="item-tag">Whole Milk / Oat (+.60)</span>
+                  </div>
+                </article>
+
+                <article class="menu-item-card">
+                  <div class="item-header">
+                    <h3 class="item-name">Flat White</h3>
+                    <span class="item-price">$5.00</span>
+                  </div>
+                  <p class="item-desc">Double ristretto topped with dense, silky microfoam. Velvety texture with pronounced espresso intensity.</p>
+                  <div class="item-meta">
+                    <span class="item-tag">6oz Cup</span>
+                  </div>
+                </article>
+
+                <article class="menu-item-card">
+                  <div class="item-header">
+                    <h3 class="item-name">Ember Cardamom Latte</h3>
+                    <span class="item-price">$5.75</span>
+                  </div>
+                  <p class="item-desc">House-infused green cardamom syrup, orange blossom water, espresso, and steamed oat milk dusted with cinnamon bark.</p>
+                  <div class="item-meta">
+                    <span class="item-tag signature-tag">★ Signature Recipe</span>
+                  </div>
+                </article>
+
+                <article class="menu-item-card">
+                  <div class="item-header">
+                    <h3 class="item-name">Nitro Draft Cold Brew</h3>
+                    <span class="item-price">$5.50</span>
+                  </div>
+                  <p class="item-desc">24-hour slow steep poured through nitrogen draft tap. Velvety cascading head, cacao nibs, and zero bitterness.</p>
+                  <div class="item-meta">
+                    <span class="item-tag">16oz Glass • Chilled</span>
+                  </div>
+                </article>
+
+                <article class="menu-item-card">
+                  <div class="item-header">
+                    <h3 class="item-name">Tonic & Espresso Spritz</h3>
+                    <span class="item-price">$6.25</span>
+                  </div>
+                  <p class="item-desc">Fever-Tree Mediterranean tonic water, double chilled espresso float, grapefruit peel express, and rosemary sprig.</p>
+                  <div class="item-meta">
+                    <span class="item-tag">Sparkling & Refreshing</span>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- Panel 2: Pour Over -->
+            <div class="tab-panel" id="panel-pourover" role="tabpanel" aria-labelledby="tab-pourover" hidden>
+              <div class="menu-items-grid">
+                <article class="menu-item-card">
+                  <div class="item-header">
+                    <h3 class="item-name">Ethiopia Guji Highlands</h3>
+                    <span class="item-price">$6.50</span>
+                  </div>
+                  <p class="item-desc">Brewed on ceramic Hario V60. Jasmine blossoms, crisp white peach, and sparkling lemon bergamot acidity.</p>
+                  <div class="item-meta">
+                    <span class="item-tag">Washed Heirloom • Light Roast</span>
+                  </div>
+                </article>
+
+                <article class="menu-item-card">
+                  <div class="item-header">
+                    <h3 class="item-name">Panama Boquete Geisha</h3>
+                    <span class="item-price">$9.50</span>
+                  </div>
+                  <p class="item-desc">Micro-lot roasted weekly. Lemongrass, papaya, Earl Grey tea, and an extraordinarily clean, lingering honeysuckle finish.</p>
+                  <div class="item-meta">
+                    <span class="item-tag signature-tag">★ Limited Micro-Lot</span>
+                  </div>
+                </article>
+
+                <article class="menu-item-card">
+                  <div class="item-header">
+                    <h3 class="item-name">Colombia Pink Bourbon</h3>
+                    <span class="item-price">$7.00</span>
+                  </div>
+                  <p class="item-desc">Brewed with double-wall Kalita Wave. Notes of pink grapefruit, golden raisin, and complex floral sweetness.</p>
+                  <div class="item-meta">
+                    <span class="item-tag">Anaerobic Ferment • Huila</span>
+                  </div>
+                </article>
+
+                <article class="menu-item-card">
+                  <div class="item-header">
+                    <h3 class="item-name">Sumatra Kerinci Highland</h3>
+                    <span class="item-price">$6.25</span>
+                  </div>
+                  <p class="item-desc">Aeropress extraction with high clarity. Cedar wood, dark cherry compote, dark cacao, and syrupy body.</p>
+                  <div class="item-meta">
+                    <span class="item-tag">Wet-Hulled Organic</span>
+                  </div>
+                </article>
+
+                <article class="menu-item-card">
+                  <div class="item-header">
+                    <h3 class="item-name">Curated Pour-Over Flight</h3>
+                    <span class="item-price">$14.00</span>
+                  </div>
+                  <p class="item-desc">Side-by-side tasting carafe of 3 seasonal single origins, accompanied by barista flavor wheel and origin card.</p>
+                  <div class="item-meta">
+                    <span class="item-tag">Tasting Experience</span>
+                  </div>
+                </article>
+
+                <article class="menu-item-card">
+                  <div class="item-header">
+                    <h3 class="item-name">Decaf Colombia Huila</h3>
+                    <span class="item-price">$6.00</span>
+                  </div>
+                  <p class="item-desc">Sugarcane EA decaffeination brewed on Chemex. Brown sugar sweetness, baked red apple, and milk chocolate.</p>
+                  <div class="item-meta">
+                    <span class="item-tag">99.9% Caffeine-Free</span>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- Panel 3: Pastries -->
+            <div class="tab-panel" id="panel-pastries" role="tabpanel" aria-labelledby="tab-pastries" hidden>
+              <div class="menu-items-grid">
+                <article class="menu-item-card">
+                  <div class="item-header">
+                    <h3 class="item-name">Cardamom Morning Bun</h3>
+                    <span class="item-price">$4.75</span>
+                  </div>
+                  <p class="item-desc">Laminated croissant dough rolled with freshly ground green cardamom, raw turbinado sugar, and orange zest.</p>
+                  <div class="item-meta">
+                    <span class="item-tag signature-tag">★ Daily Cafe Favorite</span>
+                  </div>
+                </article>
+
+                <article class="menu-item-card">
+                  <div class="item-header">
+                    <h3 class="item-name">Smoked Almond Frangipane Tart</h3>
+                    <span class="item-price">$5.50</span>
+                  </div>
+                  <p class="item-desc">Buttery shortbread crust filled with roasted almond frangipane, topped with sliced local pears and flaky salt.</p>
+                  <div class="item-meta">
+                    <span class="item-tag">Vegetarian</span>
+                  </div>
+                </article>
+
+                <article class="menu-item-card">
+                  <div class="item-header">
+                    <h3 class="item-name">Sourdough Sea Salt Cookie</h3>
+                    <span class="item-price">$3.75</span>
+                  </div>
+                  <p class="item-desc">Fermented sourdough discard, Valrhona 70% dark chocolate chunks, and Jacobsen Flake sea salt.</p>
+                  <div class="item-meta">
+                    <span class="item-tag">Warm & Chewy</span>
+                  </div>
+                </article>
+
+                <article class="menu-item-card">
+                  <div class="item-header">
+                    <h3 class="item-name">Whipped Ricotta & Fig Toast</h3>
+                    <span class="item-price">$8.50</span>
+                  </div>
+                  <p class="item-desc">Thick-cut country sourdough, house-whipped lemon ricotta, mission figs, local wildflower honey, and thyme sprigs.</p>
+                  <div class="item-meta">
+                    <span class="item-tag">Savory & Sweet</span>
+                  </div>
+                </article>
+
+                <article class="menu-item-card">
+                  <div class="item-header">
+                    <h3 class="item-name">Gruyère & Caramelized Leek Croissant</h3>
+                    <span class="item-price">$6.25</span>
+                  </div>
+                  <p class="item-desc">French butter croissant pastry layered with cave-aged Swiss Gruyère, thyme, and slow-melted braised leeks.</p>
+                  <div class="item-meta">
+                    <span class="item-tag">Warm Savory Fare</span>
+                  </div>
+                </article>
+
+                <article class="menu-item-card">
+                  <div class="item-header">
+                    <h3 class="item-name">Tahini Banana Tea Cake</h3>
+                    <span class="item-price">$4.50</span>
+                  </div>
+                  <p class="item-desc">Naturally sweetened with roasted ripe bananas, roasted sesame tahini swirl, and crunchy cacao nib crust.</p>
+                  <div class="item-meta">
+                    <span class="item-tag">Gluten-Free Recipe • Vegan</span>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visit Us & Hours / Reservation Section -->
+    <section class="visit-section" id="visit">
+      <div class="container">
+        <div class="visit-grid">
+          <!-- Left Column: Location Details & Opening Hours -->
+          <div class="visit-info-column">
+            <span class="section-kicker">Find Your Seat</span>
+            <h2 class="section-title">Visit Our Cafe & Roastery</h2>
+            <p class="visit-intro">
+              Step into our bright, sunlit space where open sackcloth coffees are inspected, batches are drum-roasted in full view, and every drink is pulled with care.
+            </p>
+
+            <div class="location-details">
+              <div class="info-block">
+                <div class="info-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="info-title">Location</h3>
+                  <address class="info-text">
+                    428 Artisan Way, Coffee Quarter<br>
+                    Portland, Oregon 97209
+                  </address>
+                  <span class="info-subtext">Free customer parking on 5th Ave • Max Light Rail Station (2 blocks)</span>
+                </div>
+              </div>
+
+              <div class="info-block">
+                <div class="info-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="info-title">Weekly Roastery Hours</h3>
+                  <div class="hours-table">
+                    <div class="hours-row">
+                      <span class="day-col">Monday – Friday</span>
+                      <span class="time-col">07:00 AM – 06:00 PM</span>
+                    </div>
+                    <div class="hours-row">
+                      <span class="day-col">Saturday</span>
+                      <span class="time-col">08:00 AM – 07:00 PM</span>
+                    </div>
+                    <div class="hours-row">
+                      <span class="day-col">Sunday</span>
+                      <span class="time-col">08:00 AM – 05:00 PM</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="info-block">
+                <div class="info-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="info-title">Contact & Barista Bar</h3>
+                  <p class="info-text">hello@emberandbean.com • (503) 555-0198</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cafe Amenities Badges -->
+            <div class="amenities-pills">
+              <span class="amenity-pill">🌿 Dog-Friendly Garden</span>
+              <span class="amenity-pill">⚡ High-Speed Wi-Fi</span>
+              <span class="amenity-pill">☕ Cupping Table Access</span>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Table Reservation / Contact Form -->
+          <div class="reservation-form-column">
+            <div class="form-card">
+              <div class="form-header">
+                <h3 class="form-title">Reserve a Table or Inquire</h3>
+                <p class="form-subtitle">Book a slow pour-over flight, reserve a quiet corner table, or arrange a private roastery tour.</p>
+              </div>
+
+              <!-- Form Body -->
+              <form id="reservation-form" class="reservation-form" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="res-name" class="form-label">Your Name <span class="required">*</span></label>
+                    <input type="text" id="res-name" name="name" class="form-input" placeholder="e.g. Maya Lin" required autocomplete="name">
+                    <span class="field-error-msg" id="name-error" aria-live="polite"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="res-email" class="form-label">Email Address <span class="required">*</span></label>
+                    <input type="email" id="res-email" name="email" class="form-input" placeholder="maya@example.com" required autocomplete="email">
+                    <span class="field-error-msg" id="email-error" aria-live="polite"></span>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="res-date" class="form-label">Preferred Date <span class="required">*</span></label>
+                    <input type="date" id="res-date" name="date" class="form-input" required>
+                    <span class="field-error-msg" id="date-error" aria-live="polite"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="res-time" class="form-label">Preferred Time Slot <span class="required">*</span></label>
+                    <select id="res-time" name="time" class="form-select" required>
+                      <option value="">Select a time...</option>
+                      <option value="08:30 AM">08:30 AM (Morning Brew)</option>
+                      <option value="10:00 AM">10:00 AM (Peak Rush)</option>
+                      <option value="11:30 AM">11:30 AM (Midday Flight)</option>
+                      <option value="01:30 PM">01:30 PM (Slow Cupping)</option>
+                      <option value="03:00 PM">03:00 PM (Afternoon Tonic)</option>
+                      <option value="04:30 PM">04:30 PM (Evening Wind-Down)</option>
+                    </select>
+                    <span class="field-error-msg" id="time-error" aria-live="polite"></span>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="res-party" class="form-label">Party Size</label>
+                    <select id="res-party" name="party" class="form-select">
+                      <option value="1">1 Guest (Bar Seat)</option>
+                      <option value="2" selected>2 Guests (Standard Table)</option>
+                      <option value="3-4">3–4 Guests (Booth)</option>
+                      <option value="5-6">5–6 Guests (Communal Table)</option>
+                      <option value="7+">7+ Guests (Private Tasting Room)</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="res-seating" class="form-label">Seating Preference</label>
+                    <select id="res-seating" name="seating" class="form-select">
+                      <option value="indoor">Indoor Espresso Bar</option>
+                      <option value="garden">Sunlit Garden Patio</option>
+                      <option value="roaster">Near Roasting Drum</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="res-notes" class="form-label">Special Requests / Occasion</label>
+                  <textarea id="res-notes" name="notes" class="form-textarea" rows="3" placeholder="Tell us about special dietary needs, cupping tasting flight preferences, or celebrations..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block submit-btn" id="submit-reservation">
+                  <span class="btn-spinner" aria-hidden="true"></span>
+                  <span class="btn-label">Confirm Reservation</span>
+                </button>
+              </form>
+
+              <!-- Reservation Confirmation Feedback Message (Hidden initially) -->
+              <div id="reservation-confirmation" class="reservation-success-card" role="alert" hidden>
+                <div class="success-icon-wrap" aria-hidden="true">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FAF7F2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <h4 class="success-title">Your Table is Reserved!</h4>
+                <p class="success-desc">
+                  Thank you, <strong id="confirm-name">Guest</strong>. A booking confirmation and calendar pass have been dispatched to <span id="confirm-email">your email</span>.
+                </p>
+                <div class="confirm-summary-box">
+                  <div class="summary-line">
+                    <span class="summary-label">Date & Time:</span>
+                    <strong id="confirm-datetime" class="summary-val">Tomorrow at 10:00 AM</strong>
+                  </div>
+                  <div class="summary-line">
+                    <span class="summary-label">Party & Seating:</span>
+                    <strong id="confirm-party" class="summary-val">2 Guests • Indoor Espresso Bar</strong>
+                  </div>
+                  <div class="summary-line">
+                    <span class="summary-label">Reservation Code:</span>
+                    <span class="summary-code" id="confirm-code">#EB-8492</span>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-secondary btn-sm" id="reset-reservation-btn">Book Another Visit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top-grid">
+        <!-- Brand & Newsletter -->
+        <div class="footer-brand-col">
+          <a href="#hero" class="brand-logo footer-logo" aria-label="Ember & Bean Home">
+            <svg class="logo-icon" width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M16 2.5C8.82 2.5 3 8.32 3 15.5C3 22.68 8.82 28.5 16 28.5C23.18 28.5 29 22.68 29 15.5C29 8.32 23.18 2.5 16 2.5Z" stroke="#C85A32" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M16 6C12.5 11 19.5 19 16 25" stroke="#C85A32" stroke-width="2.2" stroke-linecap="round"/>
+              <circle cx="16" cy="15.5" r="2" fill="#C85A32" />
+            </svg>
+            <span class="brand-text">Ember <span class="ampersand">&</span> Bean</span>
+          </a>
+          <p class="footer-tagline">
+            Small-batch specialty coffee flame-roasted with care in Portland, OR. Direct trade relationships, exceptional cups.
+          </p>
+          
+          <!-- Newsletter Signup Form -->
+          <div class="newsletter-wrapper">
+            <h4 class="newsletter-heading">The Roast Dispatch</h4>
+            <p class="newsletter-sub">Get notified when new micro-lots and harvest drops land on our roaster.</p>
+            <form id="newsletter-form" class="newsletter-form" novalidate>
+              <div class="newsletter-input-group">
+                <input type="email" id="newsletter-email" class="newsletter-input" placeholder="Enter your email address" required aria-label="Email address for coffee newsletter">
+                <button type="submit" class="btn btn-primary newsletter-submit-btn">Subscribe</button>
+              </div>
+              <span id="newsletter-msg" class="newsletter-feedback" aria-live="polite"></span>
+            </form>
+          </div>
+        </div>
+
+        <!-- Quick Links Columns -->
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#story">Our Story & Roasters</a></li>
+            <li><a href="#roasts">Shop Fresh Roasts</a></li>
+            <li><a href="#menu">In-Cafe Menu</a></li>
+            <li><a href="#visit">Table Reservations</a></li>
+            <li><a href="#visit">Location & Hours</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Coffee Education</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#story">Origin Transparency</a></li>
+            <li><a href="#roasts">Roast Level Guide</a></li>
+            <li><a href="#menu">V60 Pour-Over Ratio</a></li>
+            <li><a href="#story">Compostable Packaging</a></li>
+            <li><a href="#visit">Barista Apprenticeship</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Connect</h4>
+          <p class="footer-contact-item">428 Artisan Way, Portland, OR</p>
+          <p class="footer-contact-item">support@emberandbean.com</p>
+          
+          <div class="social-links" aria-label="Social media channels">
+            <a href="https://instagram.com" class="social-icon-link" aria-label="Follow Ember and Bean on Instagram" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://spotify.com" class="social-icon-link" aria-label="Listen to the Ember and Bean Cafe Playlist on Spotify" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M8 11.5c3.5-1 6.5-.5 9 1"></path>
+                <path d="M7 14c4-1.2 7-.7 10 1"></path>
+                <path d="M9 9c3-1 6-.5 8.5 1"></path>
+              </svg>
+            </a>
+            <a href="https://twitter.com" class="social-icon-link" aria-label="Follow Ember and Bean on X" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; <span id="current-year">2026</span> Ember & Bean Specialty Roasters LLC. All rights reserved.</p>
+        <div class="legal-links">
+          <a href="#hero">Privacy Policy</a>
+          <span class="dot-separator">•</span>
+          <a href="#hero">Terms of Service</a>
+          <span class="dot-separator">•</span>
+          <a href="#hero">Accessibility Statement</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-out Cart Drawer / Modal -->
+  <div id="cart-drawer-backdrop" class="cart-drawer-backdrop" aria-hidden="true">
+    <div id="cart-drawer" class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-drawer-title">
+      <div class="drawer-header">
+        <h3 id="cart-drawer-title" class="drawer-title">
+          <span>Your Coffee Bag</span>
+          <span class="drawer-count-badge" id="drawer-count-badge">0 items</span>
+        </h3>
+        <button id="close-cart-btn" class="drawer-close-btn" aria-label="Close shopping bag">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="drawer-body" id="cart-items-container">
+        <!-- Rendered dynamically by script.js -->
+        <div class="empty-cart-state">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#6E6259" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <p class="empty-text">Your bag is currently empty.</p>
+          <a href="#roasts" class="btn btn-secondary btn-sm" id="shop-beans-empty-btn">Explore Roasts</a>
+        </div>
+      </div>
+
+      <div class="drawer-footer" id="cart-drawer-footer">
+        <div class="cart-subtotal-row">
+          <span class="subtotal-label">Subtotal:</span>
+          <span class="subtotal-val" id="cart-subtotal-val">$0.00</span>
+        </div>
+        <p class="drawer-shipping-note">Free shipping on orders of 2 or more bags.</p>
+        <button class="btn btn-primary btn-block checkout-btn" id="checkout-btn">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Toast Notification System -->
+  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Vanilla JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
